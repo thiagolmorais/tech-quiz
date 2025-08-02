@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico do Projeto: Tech-Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#F0F8FF]">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-8 md:my-12">
+            <h1 class="text-5xl md:text-7xl font-black text-[#004AAD]">Projeto: Tech-Quiz</h1>
+            <p class="text-xl md:text-2xl text-[#0079FF] mt-4">Um infográfico sobre o plano de desenvolvimento do nosso novo aplicativo de quiz.</p>
+        </header>
+
+        <main class="space-y-12 md:space-y-20">
+
+            <section id="overview" class="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+                <h2 class="text-3xl font-bold text-center text-[#004AAD] mb-8">Visão Geral e Pilares Tecnológicos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <div class="text-8xl font-black text-[#0079FF]">1</div>
+                        <p class="text-xl text-gray-600 mt-2">Aplicativo Nativo Focado</p>
+                        <div class="text-8xl font-black text-[#0079FF] mt-6">5+</div>
+                        <p class="text-xl text-gray-600 mt-2">Funcionalidades Essenciais</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-[#B3D9FF] p-4 rounded-lg shadow-md">
+                            <div class="text-4xl font-bold text-[#004AAD]">KT</div>
+                            <p class="mt-2 font-semibold text-[#004AAD]">Kotlin</p>
+                        </div>
+                        <div class="bg-[#B3D9FF] p-4 rounded-lg shadow-md">
+                            <div class="text-4xl font-bold text-[#004AAD]">AS</div>
+                            <p class="mt-2 font-semibold text-[#004AAD]">Android Studio</p>
+                        </div>
+                        <div class="bg-[#B3D9FF] p-4 rounded-lg shadow-md">
+                            <div class="text-4xl font-bold text-[#004AAD]">XML</div>
+                            <p class="mt-2 font-semibold text-[#004AAD]">Layouts UI</p>
+                        </div>
+                        <div class="bg-[#B3D9FF] p-4 rounded-lg shadow-md">
+                            <div class="text-4xl font-bold text-[#004AAD]">VM</div>
+                            <p class="mt-2 font-semibold text-[#004AAD]">ViewModel</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features">
+                <h2 class="text-3xl font-bold text-center text-[#004AAD] mb-8">Funcionalidades Principais (User Stories)</h2>
+                <div class="relative flex flex-col items-center space-y-8">
+                    <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-[#B3D9FF] -translate-x-1/2"></div>
+
+                    <div class="relative w-full max-w-md bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#0079FF]">
+                        <div class="absolute -left-5 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#0079FF] rounded-full border-4 border-white flex items-center justify-center text-white font-bold">1</div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Exibição da Pergunta</h3>
+                        <p class="text-gray-600 mt-2">Mostrar a pergunta atual com 4 opções de múltipla escolha.</p>
+                    </div>
+
+                    <div class="relative w-full max-w-md bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#0079FF]">
+                        <div class="absolute -left-5 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#0079FF] rounded-full border-4 border-white flex items-center justify-center text-white font-bold">2</div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Processamento de Resposta</h3>
+                        <p class="text-gray-600 mt-2">Validar a resposta do usuário e fornecer feedback visual imediato (certo/errado).</p>
+                    </div>
+
+                    <div class="relative w-full max-w-md bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#0079FF]">
+                        <div class="absolute -left-5 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#0079FF] rounded-full border-4 border-white flex items-center justify-center text-white font-bold">3</div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Navegação</h3>
+                        <p class="text-gray-600 mt-2">Permitir que o usuário avance para a próxima pergunta após responder.</p>
+                    </div>
+
+                    <div class="relative w-full max-w-md bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#0079FF]">
+                        <div class="absolute -left-5 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#0079FF] rounded-full border-4 border-white flex items-center justify-center text-white font-bold">4</div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Pontuação Final</h3>
+                        <p class="text-gray-600 mt-2">Exibir a pontuação total ao final do quiz.</p>
+                    </div>
+
+                    <div class="relative w-full max-w-md bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#0079FF]">
+                        <div class="absolute -left-5 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#0079FF] rounded-full border-4 border-white flex items-center justify-center text-white font-bold">5</div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Reiniciar Quiz</h3>
+                        <p class="text-gray-600 mt-2">Oferecer a opção de jogar novamente a partir da tela final.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dev-time" class="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+                <h2 class="text-3xl font-bold text-center text-[#004AAD] mb-2">Estimativa de Tempo de Desenvolvimento</h2>
+                <p class="text-center text-gray-600 mb-8">Uma comparação do esforço estimado (em horas) para cada funcionalidade principal. Isso ajuda no planejamento do sprint.</p>
+                <div class="chart-container">
+                    <canvas id="featuresChart"></canvas>
+                </div>
+            </section>
+
+            <section id="ux-principles">
+                <h2 class="text-3xl font-bold text-center text-[#004AAD] mb-8">Princípios de Experiência do Usuário (UX)</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-5xl mb-4">📱</div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Otimizado para Mobile</h3>
+                        <p class="text-gray-600 mt-2">Garantir usabilidade perfeita em smartphones e tablets.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-5xl mb-4">✨</div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Interface Limpa</h3>
+                        <p class="text-gray-600 mt-2">Design visualmente agradável com tipografia legível.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-5xl mb-4">👆</div>
+                        <h3 class="text-xl font-bold text-[#004AAD]">Feedback Visual</h3>
+                        <p class="text-gray-600 mt-2">Elementos interativos devem responder claramente ao toque.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 md:mt-20 py-8 border-t-2 border-[#B3D9FF]">
+            <p class="text-gray-600">Infográfico gerado para o planejamento do projeto Tech-Quiz.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        }
+
+        const ctx = document.getElementById('featuresChart').getContext('2d');
+        const featuresChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Estrutura do Projeto e UI Base',
+                    'Lógica de Resposta e Feedback',
+                    'Navegação entre Telas',
+                    'Sistema de Pontuação',
+                    'Banco de Perguntas'
+                ].map(label => wrapLabel(label, 20)),
+                datasets: [{
+                    label: 'Horas Estimadas',
+                    data: [24, 32, 16, 12, 8],
+                    backgroundColor: '#52A8FF',
+                    borderColor: '#0079FF',
+                    borderWidth: 2,
+                    borderRadius: 8,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            color: '#e0e0e0',
+                            borderColor: '#c0c0c0'
+                        },
+                        ticks: {
+                            color: '#333',
+                            font: {
+                                weight: 'bold'
+                            }
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#333',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: '#004AAD',
+                        titleFont: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 14
+                        },
+                        padding: 12,
+                        cornerRadius: 8,
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
